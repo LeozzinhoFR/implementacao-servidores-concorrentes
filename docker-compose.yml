@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  forked-server:
+    build:
+      context: ./server_forked
+    ports:
+      - "8001:8000" # Mapeia a porta 8001 do seu PC para a 8000 do contêiner
+    container_name: forked-server
+    restart: unless-stopped
+
+  # Serviço para o servidor Multithread
+  threaded-server:
+    build:
+      context: ./server_multithread
+    ports:
+      - "8002:8000" # Mapeia a porta 8002 do seu PC para a 8000 do contêiner
+    container_name: threaded-server
+    restart: unless-stopped
+
+  # Serviço para o servidor Orientado a Eventos
+  event-server:
+    build:
+      context: ./server_event_driven
+    ports:
+      - "8003:8000" # Mapeia a porta 8003 do seu PC para a 8000 do contêiner
+    container_name: event-server
+    restart: unless-stopped

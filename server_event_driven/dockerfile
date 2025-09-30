@@ -1,0 +1,9 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+COPY server-assincrono.py .
+
+EXPOSE 8000
+
+CMD ["python", "-u", "server-assincrono.py"]

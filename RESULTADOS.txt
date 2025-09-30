@@ -1,0 +1,33 @@
+PS C:\Users\felip\FACULDADE\SISTEMAS-DISTRIBUIDOS\ATIVIDADE-EM-AULA\SERVIDORES-CONCORRENTES\cliente> docker-compose logs -f forked-server
+time="2025-09-29T20:47:03-03:00" level=warning msg="C:\\Users\\felip\\FACULDADE\\SISTEMAS-DISTRIBUIDOS\\ATIVIDADE-EM-AULA\\SERVIDORES-CONCORRENTES\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+forked-server  | Servidor Forked escutando em 0.0.0.0:8000
+forked-server  | [FORKED] Cliente conectado: ('172.21.0.1', 40580)
+forked-server  | [FORKED] Recebido de ('172.21.0.1', 40580): Ola, me retorne
+forked-server  | [FORKED] Recebido de ('172.21.0.1', 40580): possivelmente
+forked-server  | [FORKED] Cliente ('172.21.0.1', 40580) desconectado.
+forked-server  | [FORKED] Cliente conectado: ('172.21.0.1', 34984)
+forked-server  | [FORKED] Recebido de ('172.21.0.1', 34984): OLA DE NOVO
+forked-server  | [FORKED] Cliente conectado: ('172.21.0.1', 44518)
+forked-server  | [FORKED] Recebido de ('172.21.0.1', 44518): ola aqui sou eu 2
+forked-server  | [FORKED] Recebido de ('172.21.0.1', 44518): viu?
+forked-server  | [FORKED] Cliente ('172.21.0.1', 44518) desconectado.
+forked-server  | [FORKED] Recebido de ('172.21.0.1', 34984): aqui sou eu 1
+forked-server  | [FORKED] Cliente ('172.21.0.1', 34984) desconectado.
+
+PS C:\Users\felip\FACULDADE\SISTEMAS-DISTRIBUIDOS\ATIVIDADE-EM-AULA\SERVIDORES-CONCORRENTES\cliente> docker-compose logs -f event-server
+time="2025-09-29T20:43:35-03:00" level=warning msg="C:\\Users\\felip\\FACULDADE\\SISTEMAS-DISTRIBUIDOS\\ATIVIDADE-EM-AULA\\SERVIDORES-CONCORRENTES\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+event-server  | Servidor Orientado a Eventos escutando em ('0.0.0.0', 8000)
+event-server  | [ASYNCIO] Cliente conectado: ('172.21.0.1', 54984)
+event-server  | [ASYNCIO] Recebido de ('172.21.0.1', 54984): kopiar
+event-server  | [ASYNCIO] Recebido de ('172.21.0.1', 54984): kp
+event-server  | [ASYNCIO] Cliente ('172.21.0.1', 54984) desconectado.
+
+PS C:\Users\felip\FACULDADE\SISTEMAS-DISTRIBUIDOS\ATIVIDADE-EM-AULA\SERVIDORES-CONCORRENTES\cliente> docker-compose logs -f threaded-server
+time="2025-09-29T20:43:49-03:00" level=warning msg="C:\\Users\\felip\\FACULDADE\\SISTEMAS-DISTRIBUIDOS\\ATIVIDADE-EM-AULA\\SERVIDORES-CONCORRENTES\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+threaded-server  | Servidor Multithread escutando em 0.0.0.0:8000
+threaded-server  | [THREAD] Cliente conectado: ('172.21.0.1', 49278)
+threaded-server  | [THREAD] Recebido de ('172.21.0.1', 49278): ola
+threaded-server  | [THREAD] Recebido de ('172.21.0.1', 49278): me retorne
+threaded-server  | [THREAD] Cliente ('172.21.0.1', 49278) desconectado.
+
+
